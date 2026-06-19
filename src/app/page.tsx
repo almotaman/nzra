@@ -2,6 +2,7 @@ import React from "react";
 import Metrics from "@/components/Metrics";
 import TourCard from "@/components/TourCard";
 import LeadForm from "@/components/LeadForm";
+import { getWhatsAppContactUrl } from "@/lib/contact";
 import { ArrowUpRight, Layers, Layout, ShieldCheck, Zap } from "lucide-react";
 
 const SAMPLE_PROJECTS = [
@@ -35,7 +36,7 @@ const SAMPLE_PROJECTS = [
 ];
 
 const WHATSAPP_CONTACT_URL =
-  "https://wa.me/01130615489?text=Hello%20NZRA%2C%20I%27d%20like%20to%20book%20a%20strategy%20demo.";
+  getWhatsAppContactUrl("Hello NZRA, I'd like to book a strategy demo.");
 
 export default function HomePage() {
   return (

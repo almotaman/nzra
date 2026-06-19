@@ -1,7 +1,8 @@
 import React from "react";
+import { getWhatsAppContactUrl } from "@/lib/contact";
 
 const WHATSAPP_CONTACT_URL =
-  "https://wa.me/01130615489?text=Hello%20NZRA%2C%20I%27d%20like%20to%20book%20a%20demo.";
+  getWhatsAppContactUrl("Hello NZRA, I'd like to book a demo.");
 
 export default function Navbar() {
   return (

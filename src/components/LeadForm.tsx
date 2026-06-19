@@ -2,9 +2,12 @@
 
 import React, { useState } from "react";
 import { MessageSquare } from "lucide-react";
+import { getWhatsAppContactUrl } from "@/lib/contact";
 
 const WHATSAPP_CONTACT_URL =
-  "https://wa.me/01130615489?text=Hello%20NZRA%2C%20I%27m%20interested%20in%20a%203D%20tour%20quote%20for%20our%20development.";
+  getWhatsAppContactUrl(
+    "Hello NZRA, I'm interested in a 3D tour quote for our development.",
+  );
 
 export default function LeadForm() {
   const [formData, setFormData] = useState({
