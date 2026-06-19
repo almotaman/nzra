@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Maximize2 } from "lucide-react";
 
 interface TourCardProps {
@@ -18,6 +18,12 @@ export default function TourCard({
   description,
   metrics,
 }: TourCardProps) {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
   return (
     <div className="group flex flex-col justify-between rounded-sm border border-zinc-900 bg-zinc-950 p-5 transition-all hover:border-zinc-800">
       <div>
@@ -36,13 +42,14 @@ export default function TourCard({
               Open Tour
             </a>
           </div>
-          <iframe
-            src={embedUrl}
-            className="h-full w-full border-0"
-            allowFullScreen
-            allow="gyroscope; accelerometer; xr-spatial-tracking"
-            loading="lazy"
-          />
+          {isLoaded ? (
+            <iframe
+              src={embedUrl}
+              className="h-full w-full border-0"
+              allowFullScreen
+              allow="gyroscope; accelerometer; xr-spatial-tracking"
+            />
+          ) : null}
           <button
             onClick={() => window.open(embedUrl, "_blank")}
             className="absolute bottom-3 right-3 z-20 rounded-sm border border-zinc-800 bg-zinc-950/80 p-2 text-zinc-400 transition-colors hover:text-zinc-100"
