@@ -7,12 +7,12 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
-  title: "VIRTUAL ARCHITECTURE | Immersive 3D Sales Engines for Real Estate",
+  title: "NZRA | Immersive 3D Tours and Property Visualization",
   description:
-    "We transform blueprints and floor plans into ultra-premium, high-converting interactive 3D & 360° virtual tours for developers, brokers, and agencies.",
+    "NZRA creates ultra-premium, high-converting interactive 3D & 360° virtual tours for developers, brokers, and agencies.",
   keywords: [
+    "NZRA",
     "3D Real Estate Tours",
-    "Matterport Egypt",
     "Kuula 360 Tours",
     "Property Visualization",
     "Real Estate Pre-sales",

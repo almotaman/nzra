@@ -6,31 +6,40 @@ import { ArrowUpRight, Layers, Layout, ShieldCheck, Zap } from "lucide-react";
 
 const SAMPLE_PROJECTS = [
   {
-    id: "lumina-penthouses",
-    title: "The Lumina Grand Penthouses",
-    client: "Acreage Development Group",
-    embedUrl: "https://kuula.co/share/collection/7K9Xy",
+    id: "tour-1",
+    title: "Tour 1",
+    client: "NZRA",
+    embedUrl: "https://kuula.co/share/collection/7Tfmh?logo=0&info=1&fs=1&vr=1&sd=1&thumbs=1",
     description:
-      "Converted raw CAD layouts into an immersive digital walkthrough. Allowed the client to secure 65% pre-sales prior to groundbreaking.",
-    metrics: { label: "Pre-Sales Secured", value: "65%" },
+      "Interactive 360° walkthrough designed for a clean branded viewing experience.",
+    metrics: { label: "Tour", value: "01" },
   },
   {
-    id: "marina-heights",
-    title: "Marina Heights Commercial Suite",
-    client: "Nexus Brokerage",
-    embedUrl: "https://kuula.co/share/collection/7K9Xy",
+    id: "tour-2",
+    title: "Tour 2",
+    client: "NZRA",
+    embedUrl: "https://kuula.co/share/collection/7TpCH?logo=0&info=1&fs=1&vr=1&sd=1&thumbs=1",
     description:
-      "Full-scale 360° spatial mapping of commercial retail floors. Enabled remote overseas buyers to finalize lease agreements completely online.",
-    metrics: { label: "Remote Closings", value: "14 Units" },
+      "A second curated tour for presenting property details in a seamless format.",
+    metrics: { label: "Tour", value: "02" },
   },
   {
-    id: "zaria-villas",
-    title: "Zaria Luxury Eco-Villas",
-    client: "Zaria Living",
-    embedUrl: "https://kuula.co/share/collection/7K9Xy",
+    id: "tour-3",
+    title: "Tour 3",
+    client: "NZRA",
+    embedUrl: "https://kuula.co/share/collection/7TpM0?logo=-1&card=1&info=0&fs=1&vr=1&gyro=0&thumbs=-1&margin=3",
     description:
-      "High-fidelity interior visualization optimized for rapid mobile loading. Reduced total real estate sales cycle duration significantly.",
-    metrics: { label: "Sales Cycle Speed", value: "-40% Days" },
+      "Optimized tour layout for a distraction-free experience and faster engagement.",
+    metrics: { label: "Tour", value: "03" },
+  },
+  {
+    id: "tour-4",
+    title: "Tour 4",
+    client: "NZRA",
+    embedUrl: "https://kuula.co/share/collection/7Tpmx?logo=-1&card=1&info=0&fs=1&vr=1&gyro=0&thumbs=-1&margin=3",
+    description:
+      "Final tour entry with immersive viewing and a consistent NZRA presentation.",
+    metrics: { label: "Tour", value: "04" },
   },
 ];
 
@@ -43,20 +52,19 @@ export default function HomePage() {
         <div className="max-w-5xl space-y-8">
           <div className="inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/60 px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-amber-400">
             <span className="flex h-2 w-2 animate-pulse rounded-full bg-amber-400" />
-            High-Performance Spatial Web Visualization
+            NZRA Property Visualization
           </div>
 
           <h1 className="text-4xl font-light leading-[1.1] tracking-tight sm:text-6xl lg:text-7xl xl:text-8xl">
             We turn floor plans into{" "}
             <span className="bg-gradient-to-r from-zinc-100 via-zinc-300 to-zinc-500 bg-clip-text font-normal text-transparent">
-              immersive sales engines.
+              immersive tours.
             </span>
           </h1>
 
           <p className="max-w-2xl text-lg font-light leading-relaxed text-zinc-400 sm:text-xl">
-            Stop losing premium prospects to static 2D galleries. We build
-            lightning-fast, interactive 3D walkthroughs proven to accelerate
-            pre-sales sequences and establish immediate buyer trust.
+            NZRA delivers fast, interactive 3D walkthroughs and curated virtual
+            tours for premium property presentations.
           </p>
 
           <div className="flex flex-col items-stretch gap-4 pt-4 sm:flex-row sm:items-center">
@@ -70,7 +78,7 @@ export default function HomePage() {
               href="#portfolio"
               className="inline-flex items-center justify-center rounded-sm border border-zinc-800 bg-zinc-900/40 px-8 py-4 text-sm font-medium text-zinc-300 transition-all hover:border-zinc-700 hover:bg-zinc-900"
             >
-              View Premium Projects <ArrowUpRight className="ml-2 h-4 w-4" />
+              View Tours <ArrowUpRight className="ml-2 h-4 w-4" />
             </a>
           </div>
         </div>
@@ -81,19 +89,17 @@ export default function HomePage() {
       <section id="portfolio" className="border-b border-zinc-900 px-6 py-24 lg:px-16">
         <div className="mb-16 max-w-3xl">
           <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-amber-500">
-            Interactive Case Studies
+            Interactive Tours
           </p>
           <h2 className="text-3xl font-light tracking-tight text-zinc-100 sm:text-5xl">
-            Engineered for Visual Dominance
+            Explore the featured NZRA tours
           </h2>
           <p className="mt-4 font-light text-zinc-400">
-            Click any deployment case below to launch the live, optimized 360°
-            environment. Experience identical performance and frame rates as
-            delivered directly to our enterprise clients.
+            Click any tour below to launch the live 360° experience.
           </p>
         </div>
 
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-2">
           {SAMPLE_PROJECTS.map((project) => (
             <TourCard key={project.id} {...project} />
           ))}
@@ -104,49 +110,44 @@ export default function HomePage() {
         <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
           <div className="space-y-6 lg:col-span-5">
             <p className="text-xs font-semibold uppercase tracking-widest text-amber-500">
-              The Deployment Workflow
+              The Workflow
             </p>
             <h3 className="text-3xl font-light tracking-tight sm:text-4xl">
-              From raw blueprints to web-ready revenue assets.
+              From raw layouts to web-ready presentations.
             </h3>
             <p className="font-light leading-relaxed text-zinc-400">
-              We eliminate traditional rendering friction. You provide spatial
-              blueprints; we return an optimized, branded interactive suite
-              completely integrated with client tracking features.
+              We take your project assets and transform them into polished,
+              branded tours.
             </p>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:col-span-7">
             <div className="rounded-sm border border-zinc-900 bg-zinc-900/20 p-6">
               <Layout className="mb-4 h-6 w-6 text-amber-400" />
-              <h4 className="mb-2 font-medium text-zinc-200">1. Blueprint Intake</h4>
+              <h4 className="mb-2 font-medium text-zinc-200">1. Asset Intake</h4>
               <p className="text-sm font-light text-zinc-400">
-                Submit your raw CAD files, BIM data, or 2D architectural sheets.
-                We standardize architectural models instantly.
+                Submit your property files or reference material.
               </p>
             </div>
             <div className="rounded-sm border border-zinc-900 bg-zinc-900/20 p-6">
               <Layers className="mb-4 h-6 w-6 text-amber-400" />
-              <h4 className="mb-2 font-medium text-zinc-200">2. Premium Conversion</h4>
+              <h4 className="mb-2 font-medium text-zinc-200">2. Tour Assembly</h4>
               <p className="text-sm font-light text-zinc-400">
-                Our engine generates accurate custom lighting environments,
-                pristine PBR textures, and real-scale depth maps.
+                We prepare a clean, branded virtual tour experience.
               </p>
             </div>
             <div className="rounded-sm border border-zinc-900 bg-zinc-900/20 p-6">
               <Zap className="mb-4 h-6 w-6 text-amber-400" />
-              <h4 className="mb-2 font-medium text-zinc-200">3. Speed Optimization</h4>
+              <h4 className="mb-2 font-medium text-zinc-200">3. Optimization</h4>
               <p className="text-sm font-light text-zinc-400">
-                Environments are optimized to bypass data bloat, loading globally
-                under 2.5 seconds over standard mobile networks.
+                Tours are tuned for fast loading and smooth interaction.
               </p>
             </div>
             <div className="rounded-sm border border-zinc-900 bg-zinc-900/20 p-6">
               <ShieldCheck className="mb-4 h-6 w-6 text-amber-400" />
-              <h4 className="mb-2 font-medium text-zinc-200">4. Pipeline Integration</h4>
+              <h4 className="mb-2 font-medium text-zinc-200">4. Delivery</h4>
               <p className="text-sm font-light text-zinc-400">
-                Get custom, white-labeled scripts ready to integrate into
-                property sites, listing boards, or sales iPads.
+                Deliver embedded or direct-link tour access for your audience.
               </p>
             </div>
           </div>
@@ -157,27 +158,12 @@ export default function HomePage() {
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="space-y-6 lg:col-span-5">
             <h2 className="text-3xl font-light tracking-tight sm:text-5xl">
-              Accelerate Your Property Sales Pipeline.
+              Contact NZRA on WhatsApp.
             </h2>
             <p className="font-light leading-relaxed text-zinc-400">
-              Schedule an exclusive layout walkthrough. Learn how our custom
-              interactive asset suites can directly reduce time-on-market metrics
-              for your active developments.
+              Reach us directly for tour requests, project questions, and new
+              branding updates.
             </p>
-            <div className="space-y-4 pt-4 text-sm text-zinc-400">
-              <div className="flex items-center gap-3">
-                <span className="h-1.5 w-1.5 rounded-full bg-amber-400" />
-                Complete deployment workflows within 7 business days
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="h-1.5 w-1.5 rounded-full bg-amber-400" />
-                Seamless custom iframe hosting or direct raw code export
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="h-1.5 w-1.5 rounded-full bg-amber-400" />
-                Native interface support across all iOS and Android systems
-              </div>
-            </div>
           </div>
 
           <div className="lg:col-span-7">

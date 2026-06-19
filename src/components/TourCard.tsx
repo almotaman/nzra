@@ -34,7 +34,7 @@ export default function TourCard({
                 onClick={() => setIsActive(true)}
                 className="inline-flex items-center gap-2 rounded-sm border border-zinc-800 bg-zinc-900 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-amber-400 transition-all hover:bg-zinc-800 hover:text-amber-300"
               >
-                <Play className="h-3 w-3 fill-amber-400" /> Launch 3D Deck
+                <Play className="h-3 w-3 fill-amber-400" /> Launch Tour
               </button>
             </div>
           ) : (
