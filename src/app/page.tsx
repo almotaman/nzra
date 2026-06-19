@@ -2,6 +2,7 @@ import React from "react";
 import Metrics from "@/components/Metrics";
 import TourCard from "@/components/TourCard";
 import LeadForm from "@/components/LeadForm";
+import { getWhatsAppContactUrl } from "@/lib/contact";
 import { ArrowUpRight, Layers, Layout, ShieldCheck, Zap } from "lucide-react";
 
 const SAMPLE_PROJECTS = [
@@ -34,6 +35,9 @@ const SAMPLE_PROJECTS = [
   },
 ];
 
+const WHATSAPP_CONTACT_URL =
+  getWhatsAppContactUrl("Hello NZRA, I'd like to book a strategy demo.");
+
 export default function HomePage() {
   return (
     <main className="relative min-h-screen pt-20">
@@ -61,7 +65,9 @@ export default function HomePage() {
 
           <div className="flex flex-col items-stretch gap-4 pt-4 sm:flex-row sm:items-center">
             <a
-              href="#book-demo"
+              href={WHATSAPP_CONTACT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-sm bg-zinc-100 px-8 py-4 text-sm font-semibold text-zinc-950 transition-all hover:bg-white active:scale-[0.98]"
             >
               Book a Strategy Demo

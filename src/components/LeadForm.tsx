@@ -2,6 +2,12 @@
 
 import React, { useState } from "react";
 import { MessageSquare } from "lucide-react";
+import { getWhatsAppContactUrl } from "@/lib/contact";
+
+const WHATSAPP_CONTACT_URL =
+  getWhatsAppContactUrl(
+    "Hello NZRA, I'm interested in a 3D tour quote for our development.",
+  );
 
 export default function LeadForm() {
   const [formData, setFormData] = useState({
@@ -117,7 +123,7 @@ export default function LeadForm() {
       </div>
 
       <a
-        href="https://wa.me/201000000000?text=I'm%20interested%20in%20a%203D%20Tour%20Quote%20for%20our%20development"
+        href={WHATSAPP_CONTACT_URL}
         target="_blank"
         rel="noopener noreferrer"
         className="flex w-full items-center justify-center gap-2.5 rounded-sm border border-emerald-800/60 bg-emerald-950/20 py-3.5 text-xs font-semibold uppercase tracking-wider text-emerald-400 transition-colors hover:bg-emerald-950/40"
