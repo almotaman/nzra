@@ -34,6 +34,9 @@ const SAMPLE_PROJECTS = [
   },
 ];
 
+const WHATSAPP_CONTACT_URL =
+  "https://wa.me/01130615489?text=Hello%20NZRA%2C%20I%27d%20like%20to%20book%20a%20strategy%20demo.";
+
 export default function HomePage() {
   return (
     <main className="relative min-h-screen pt-20">
@@ -61,7 +64,9 @@ export default function HomePage() {
 
           <div className="flex flex-col items-stretch gap-4 pt-4 sm:flex-row sm:items-center">
             <a
-              href="#book-demo"
+              href={WHATSAPP_CONTACT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-sm bg-zinc-100 px-8 py-4 text-sm font-semibold text-zinc-950 transition-all hover:bg-white active:scale-[0.98]"
             >
               Book a Strategy Demo

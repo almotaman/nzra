@@ -5,8 +5,8 @@ export default function Footer() {
     <footer className="border-t border-zinc-950 bg-zinc-950 px-6 py-12 text-xs text-zinc-600 lg:px-16">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 sm:flex-row">
         <div>
-          © {new Date().getFullYear()} SPATIALENGINE Global Visualization
-          Solutions. All rights reserved.
+          © {new Date().getFullYear()} NZRA Global Visualization Solutions. All
+          rights reserved.
         </div>
         <div className="flex items-center gap-6">
           <a href="#portfolio" className="transition-colors hover:text-zinc-400">
